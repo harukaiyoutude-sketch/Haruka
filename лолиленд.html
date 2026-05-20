@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лолиленд - Официальный сайт города</title>
+    <style>
+        /* --- Общие стили --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(120deg, #fbc2eb, #a6c1ee);
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* --- Навигация --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li {
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li:hover {
+            color: #ff66cc;
+            cursor: pointer;
+        }
+
+        /* --- Секции --- */
+        section {
+            min-height: 100vh;
+            padding: 100px 50px 50px 50px;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p {
+            max-width: 800px;
+            margin: 10px auto 30px auto;
+            text-align: center;
+        }
+
+        /* --- Главная секция --- */
+        #home {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #home h1 {
+            font-size: 4em;
+            color: #ff66cc;
+            text-shadow: 2px 2px #fff;
+        }
+
+        #home p {
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        #home .btn {
+            padding: 10px 25px;
+            background: #ff66cc;
+            color: white;
+            border-radius: 8px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        #home .btn:hover {
+            background: #ff3399;
+        }
+
+        /* --- Карточки --- */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.7);
+            border-radius: 15px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        /* --- Карта города --- */
+        #map img {
+            display: block;
+            max-width: 90%;
+            margin: 0 auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* --- Новости --- */
+        .news-item {
+            background: rgba(255,255,255,0.7);
+            margin: 15px auto;
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 700px;
+            transition: transform 0.3s;
+        }
+
+        .news-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* --- Форма контактов --- */
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        button {
+            padding: 10px;
+            background: #ff66cc;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ff3399;
+        }
+
+        /* --- Футер --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav>
+        <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#about">О городе</a></li>
+            <li><a href="#founders">Основатели</a></li>
+            <li><a href="#map">Схема города</a></li>
+            <li><a href="#news">Новости</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <!-- Главная -->
+    <section id="home">
+        <h1>Лолиленд</h1>
+        <p>Добро пожаловать в мир маленьких девочек и больших приключений! Город принадлежит Консультату Детского Мира на сервере SpMini.</p>
+        <a href="#about" class="btn">Узнать больше</a>
+    </section>
+
+    <!-- О городе -->
+    <section id="about">
+        <h2>О городе</h2>
+        <p>Лолиленд — уютный город, созданный для игроков, представляющих маленьких девочек. Здесь каждый житель может развивать свои участки, строить красивые дома и участвовать в событиях сервера.</p>
+    </section>
+
+    <!-- Основатели и жители -->
+    <section id="founders">
+        <h2>Основатели и жители</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Консультат Детского Мира</h3>
+                <p>Основатель города, владелец земель.</p>
+            </div>
+            <div class="card">
+                <h3>Помощник 1</h3>
+                <p>Помогал в строительстве и развитии города.</p>
+            </div>
+            <div class="card">
+                <h3>Житель: Маленькая Девочка 1</h3>
+                <p>Любимая постройка: Парк.</p>
+            </div>
+            <div class="card">
+                <h3>Житель: Маленькая Девочка 2</h3>
+                <p>Любимая постройка: Домик на дереве.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Схема города -->
+    <section id="map">
+        <h2>Схема города</h2>
+        <p>Интерактивная карта пока в разработке, но вы можете увидеть общий вид города:</p>
+        <img src="https://via.placeholder.com/800x400.png?text=Схема+города+Лолиленд" alt="Схема города Лолиленд">
+    </section>
+
+    <!-- Новости -->
+    <section id="news">
+        <h2>Новости</h2>
+        <div class="news-item">
+            <h3>Новая игровая площадка</h3>
+            <p>Сегодня открыта новая площадка для жителей города с безопасными зонами для игр.</p>
+        </div>
+        <div class="news-item">
+            <h3>Конкурс построек</h3>
+            <p>Начался конкурс на лучшую постройку месяца! Участвуйте и побеждайте призы.</p>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact">
+        <h2>Контакты</h2>
+        <form>
+            <input type="text" placeholder="Ваше имя">
+            <input type="email" placeholder="Ваш email">
+            <textarea rows="5" placeholder="Сообщение"></textarea>
+            <button type="submit">Отправить
